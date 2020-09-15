@@ -1,5 +1,5 @@
 ---
-typora-root-url: pics
+typora-root-url: https://github.com/CompuerSystem2020/BluettoothCarHos/tree/state1/pics
 ---
 
 # 这里是state1-Hos软件部分的说明文档
