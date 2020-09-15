@@ -1,7 +1,3 @@
----
-typora-root-url: https://github.com/CompuerSystem2020/BluettoothCarHos/tree/state1/pics
----
-
 # 这里是state1-Hos软件部分的说明文档
 
 ## 主要任务
@@ -27,8 +23,8 @@ typora-root-url: https://github.com/CompuerSystem2020/BluettoothCarHos/tree/stat
 
 ### 3.下载到开发板
 
-1. 修改debug目录下的openocd.cfg文件，修改方式即为指定本机安装OpenOCD的目录。![openocd_cfg_modify](/openocd_cfg_modify.png)
-2. 修改Hos根目录下的run.bat脚本。![run_bat_modify](/run_bat_modify.png)
+1. 修改debug目录下的openocd.cfg文件，修改方式即为指定本机安装OpenOCD的目录。![openocd_cfg_modify](https://github.com/CompuerSystem2020/BluettoothCarHos/blob/state1/pics/openocd_cfg_modify.png)
+2. 修改Hos根目录下的run.bat脚本。![run_bat_modify](https://github.com/CompuerSystem2020/BluettoothCarHos/blob/state1/pics/run_bat_modify.png)
 
 需要修改PUTTY的读取端口，具体的端口需要到设备管理器中读取具体的端口号，这在指导书上有。此外，找到端口后需要在其属性中修改每秒读取的速率为115200，电脑可能默认为9600。
 
@@ -42,21 +38,21 @@ start cmd /K "C:\Program Files\Imagination Technologies\OpenOCD-0.10.0.3-img\bin
 
 使用cygwin64自带的shell工具运行./run.bat脚本（或者直接用cmd运行也可以），该窗口显示为
 
-![cygwin64_wait_enter](/cygwin64_wait_enter.png)
+![cygwin64_wait_enter](https://github.com/CompuerSystem2020/BluettoothCarHos/blob/state1/pics/cygwin64_wait_enter.png)
 
 即等待键入以继续，键入后，该窗口显示为（需要等一段时间）
 
-![cygwin_final_show](/cygwin_final_show.png)
+![cygwin_final_show](https://github.com/CompuerSystem2020/BluettoothCarHos/blob/state1/pics/cygwin_final_show.png)
 
 此时还会代开openOCD以及putty窗口，分别如下
 
-![openocd_final_show](/openocd_final_show.png)
+![openocd_final_show](https://github.com/CompuerSystem2020/BluettoothCarHos/blob/state1/pics/openocd_final_show.png)
 
-![putty_show](/putty_show.png)
+![putty_show](https://github.com/CompuerSystem2020/BluettoothCarHos/blob/state1/pics/putty_show.png)
 
 可以看到此时putty已经可以从端口处获取系统运行结果了，但是支持的指令不是很多，目前支持ls、cat等。
 
-![putty_ls](/putty_ls.png)
+![putty_ls](https://github.com/CompuerSystem2020/BluettoothCarHos/blob/state1/pics/putty_ls.png)
 
 至此第一阶段完成。
 
