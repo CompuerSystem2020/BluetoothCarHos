@@ -94,6 +94,14 @@ sys_putc(uint32_t arg[]) {
     return 0;
 }
 
+// add sys_hello here
+static uint32_t 
+sys_hello() {
+    char * s = "kernal: hello world!\n\r";
+    kputs(s);
+    return 0;
+}
+
 static uint32_t
 sys_pgdir(uint32_t arg[]) {
     print_pgdir();
@@ -302,6 +310,7 @@ static uint32_t (*syscalls[])(uint32_t arg[]) = {
     [SYS_dup]               sys_dup,
     [SYS_pipe]              sys_pipe,
     [SYS_mkfifo]            sys_mkfifo,
+    [SYS_hello]             sys_hello,
 };
 
 #define NUM_SYSCALLS        ((sizeof(syscalls)) / (sizeof(syscalls[0])))

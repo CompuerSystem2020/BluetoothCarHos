@@ -48,6 +48,8 @@
 #define SYS_dup             130
 #define SYS_pipe            140
 #define SYS_mkfifo          141
+/*add SYS_hello here*/
+#define SYS_hello           142
 
 #define SYS_mount           153
 #define SYS_umount			154

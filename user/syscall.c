@@ -86,6 +86,11 @@ int sys_putc(int c)
 	return syscall(SYS_putc, c);
 }
 
+int sys_hello()
+{
+	return syscall(SYS_hello);
+}
+
 int sys_pgdir(void)
 {
 	return syscall(SYS_pgdir);

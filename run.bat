@@ -3,6 +3,6 @@ CD /D debug
 start "" PUTTY.EXE -serial COM8 -sercfg 115200
 :start cmd /C loadMIPSfpga.bat ../obj/kernel/ucore-kernel-initrd
 start cmd /K "C:\Program Files\Imagination Technologies\OpenOCD-0.10.0.3-img\bin\openocd.exe"
-mips-mti-elf-gdb.exe ../obj/kernel/ucore-kernel-initrd -x startup-ucore.txt
+:mips-mti-elf-gdb.exe ../obj/kernel/ucore-kernel-initrd -x startup-ucore.txt
 CD /D ..
 EXIT

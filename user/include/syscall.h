@@ -16,6 +16,8 @@ int sys_kill(int pid);
 size_t sys_gettime(void);
 int sys_getpid(void);
 int sys_putc(int c);
+/*add sys_hello here*/
+int sys_hello(void);
 int sys_pgdir(void);
 sem_t sys_sem_init(int value);
 int sys_sem_post(sem_t sem_id);
