@@ -14,11 +14,13 @@
 
 由于蓝牙数据读取通过串口模块UART实现，添加UART串口模块地址UART_BASE
 由于马达驱动模块通过PMOD接口实现，添加PMOD接口模块地址WHEEL_BASE
+
 ![arch.h中注册分配地址](https://github.com/CompuerSystem2020/BluettoothCarHos/blob/state3/pic/base_address.png)
 
 ### 2.中断调用解释
 
 对于蓝牙模块和马达驱动模块都通过串口中断来实现，因此观察trap.c文件及，发现在函数trap_dispatch中处理中断是通过调用函数interrupt_handler实现
+
 ![trap.dispatch函数](https://github.com/CompuerSystem2020/BluettoothCarHos/blob/state3/pic/trap_dispatch.png)
 观察interrupt_handler函数和trapframe结构，interrupt_handler函数对于不同原因的中断请求通过优先级计算进行不同顺序的处理(1)，对于6号cause register保存的待处理中断信号调用serial_int_handler进行处理(2)
 ![trapframe结构](https://github.com/CompuerSystem2020/BluettoothCarHos/blob/state3/pic/trapframe.png)
