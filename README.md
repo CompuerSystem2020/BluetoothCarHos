@@ -36,4 +36,4 @@ PS：但是发现注释与实际情况不符如图所示：（未作修改/doge�
 
 ### 4.模块初始化解释
 由于蓝牙模块和马达驱动模块均不是使用新建驱动设备来实现的，因此需要在内核的初始化中进行初始化。
-![初始化](https://github.com/CompuerSystem2020/BluettoothCarHos/blob/state3/pic/initial.png)
+![初始化](https://github.com/CompuerSystem2020/BluettoothCarHos/blob/state3/pic/inital.png)
