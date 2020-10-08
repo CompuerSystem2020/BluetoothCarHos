@@ -35,11 +35,11 @@ PS：但是发现注释与实际情况不符如图所示：（未作修改/doge�
 
 ### 3.中断处理解释
 
-首先在get_eic函数中根据中断请求来决定处理顺序(1)，由于中断请求由向量位置决定，因此LSB(即0比特位)有最高优先级，MSB有最低优先级，0号比特位用于存储马达驱动对应的中断请求，1号比特位用于存储蓝牙控制对应的中断请求
+首先在get_eic函数中根据中断请求来决定处理顺序(1)，由于中断请求由向量位置决定，因此LSB(即0比特位)有最高优先级，MSB有最低优先级，0号比特位用于存储拓展功能对应的中断请求，1号比特位用于存储蓝牙控制对应的中断请求
 
 ![get_eic函数](https://github.com/CompuerSystem2020/BluettoothCarHos/blob/state3/pic/get_eic.png)
 
-在serial_int_handler中调用get_eic函数，根据当前需要处理的中断请求分别对马达驱动和蓝牙进行处理，若无中断请求，则完成其他系统操作。
+在serial_int_handler中调用get_eic函数，根据当前需要处理的中断请求分别对拓展功能和蓝牙中断进行处理，若无中断请求，则完成其他系统操作。
 
 ![serial_int_handler函数](https://github.com/CompuerSystem2020/BluettoothCarHos/blob/state3/pic/serial_int_handler.png)
 
