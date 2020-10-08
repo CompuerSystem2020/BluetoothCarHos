@@ -43,7 +43,7 @@ PS：但是发现注释与实际情况不符如图所示：（未作修改/doge�
 
 ![serial_int_handler函数](https://github.com/CompuerSystem2020/BluettoothCarHos/blob/state3/pic/serial_int_handler.png)
 
-对于马达驱动的中断处理和蓝牙的处理，建议直接看serial_int_handler函数，都是对于指令的一些响应操作和数据更新orz
+对于马达驱动的中断处理、蓝牙的处理和拓展功能，建议直接看serial_int_handler函数，都是对于指令的一些响应操作和数据更新orz
 
 ### 4.模块初始化解释
 由于蓝牙模块和马达驱动模块均不是使用新建驱动设备来实现的，因此需要在内核的初始化中进行初始化。
