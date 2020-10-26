@@ -29,10 +29,6 @@
 
 ![interrupt_handler函数](https://github.com/CompuerSystem2020/BluettoothCarHos/blob/state3/pic/interrupt_handler.png)
 
-PS：但是发现注释与实际情况不符如图所示：（未作修改/doge）
-
-![trouble](https://github.com/CompuerSystem2020/BluettoothCarHos/blob/state3/pic/trouble.png)
-
 ### 3.中断处理解释
 
 首先在get_eic函数中根据中断请求来决定处理顺序(1)，由于中断请求由向量位置决定，因此LSB(即0比特位)有最高优先级，MSB有最低优先级，0号比特位用于存储拓展功能对应的中断请求，1号比特位用于存储蓝牙控制对应的中断请求
